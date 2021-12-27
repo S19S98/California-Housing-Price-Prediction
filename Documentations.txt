@@ -4,6 +4,8 @@ Create a Virtual environment:
 	deactivate
 	
 Install libraries:
+	- numpy
+	- matplotlib
 	- pandas
 	- jupyter
 	- scikit-learn
@@ -18,7 +20,16 @@ Open up Jupyter Notebook:
 	jupyter notebook
 	
 Load the data
+
 Analyse the data with:
 	head()
 	info()
 	describe()
+	.unique()
+	
+Create a Test Set keeping in mind the following:
+	- Randomly split the data into train and test using seed to maintain consistency over multiple runs
+	- If the data is expected to change (inserts at the end, no deletes from between) over time choose a Index column if present, if not create one.
+	- Try avoid Sampling Bais, by ensuring that the test set is representative of most important feature that governs the output. Median Income attribute in this case.
+	
+	
